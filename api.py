@@ -1,9 +1,15 @@
-from flask import Flask,jsonify,request
+from flask import Flask,jsonify,request,render_template
 from datetime import datetime
 import random
+from collections import Counter
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 entries = []
+@app.route("/home")
+def main():
+    return render_template("index.html")
 @app.route("/api/add", methods=['POST'])
 def add():
     data = request.get_json()
@@ -14,7 +20,7 @@ def add():
         return jsonify({"error": "No entry provided"}),400
     new_entry = {
         'id': len(entries)+1,
-        'entr   y': entry,
+        'entry': entry,
         'date': datetime.now().strftime("%Y-%m-%d") 
     }
     entries.append(new_entry)

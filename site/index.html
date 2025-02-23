@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrapper for WWGID API :D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <navbar>
+        WWGID API Wrapper
+        <a>
+            API 
+        </a>
+        <a>
+            Repository
+        </a>
+    </navbar>
+<section>
+    <h1>Get Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Event</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+
+</section>
+<section>
+    <h1>Get Random</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Event</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="table-body-rnd">
+
+        </tbody>
+    </table>
+
+</section>
+<section>
+    <h1>Get Motivated</h1>
+    <p id="motivation"></p>
+    <button onclick="getMtd();">Get Motivated!</button>
+</section>
+<section>
+    <h1>POST data</h1>
+    <input type="text" id="event" placeholder="Event">
+    <button onclick="sendData();">Send!</button>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
