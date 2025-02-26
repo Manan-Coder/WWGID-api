@@ -1,6 +1,6 @@
 async function getData(){
     try{
-        const response = await fetch('http://127.0.0.1:5000/api/get-all');
+        const response = await fetch('http://37.27.51.34:46155//api/get-all');
         const data = await response.json();
         console.log(data);
         const tableBody = document.getElementById('table-body');
@@ -19,7 +19,7 @@ async function getData(){
 }
 async function getRandData(){
     try{
-        const response = await fetch("http://127.0.0.1:5000/api/get-random");
+        const response = await fetch("http://37.27.51.34:46155//api/get-random");
         const data = await response.json();
         console.log(data);
         const tableBody = document.getElementById('table-body-rnd');
@@ -36,7 +36,7 @@ async function getRandData(){
     }}
 async function getMtd(){
     try{
-        const response = await fetch("http://127.0.0.1:5000/api/get-motivation");
+        const response = await fetch("http://37.27.51.34:46155//api/get-motivation");
         const data = await response.json();
         console.log(data);
         const para = document.getElementById('motivation');
@@ -60,7 +60,7 @@ async function getMtd(){
         const data = { entry: inputValue };
     
         try {
-            const response = await fetch("http://127.0.0.1:5000/api/add", {
+            const response = await fetch("http://37.27.51.34:46155//api/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
