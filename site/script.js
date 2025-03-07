@@ -1,25 +1,27 @@
 async function getData(){
-    try{
-        const response = await fetch('http://127.0.0.1:5000/api/get-all');
+    try {
+        const response = await fetch('https://wwgid-api.onrender.com/api/get-all');
         const data = await response.json();
-        console.log(data);
+        console.log("Full API Response:", data);  // Debugging line
+
         const tableBody = document.getElementById('table-body');
         tableBody.innerHTML = '';
+
         data.forEach(element => {
             const row = document.createElement('tr');
             row.innerHTML = `<td>${element.id}</td>
                              <td>${element.entry}</td>
                              <td>${element.date}</td>`;
             tableBody.appendChild(row);
-        }); }
-        catch(error){
-            console.log(error);}
-   
-
+        });
+    } catch(error) {
+        console.log(error);
+    }
 }
+
 async function getRandData(){
     try{
-        const response = await fetch("http://127.0.0.1:5000/api/get-random");
+        const response = await fetch("https://wwgid-api.onrender.com/api/get-random");
         const data = await response.json();
         console.log(data);
         const tableBody = document.getElementById('table-body-rnd');
@@ -36,7 +38,7 @@ async function getRandData(){
     }}
 async function getMtd(){
     try{
-        const response = await fetch("http://127.0.0.1:5000/api/get-motivation");
+        const response = await fetch("https://wwgid-api.onrender.com/api/get-motivation");
         const data = await response.json();
         console.log(data);
         const para = document.getElementById('motivation');
@@ -60,7 +62,7 @@ async function getMtd(){
         const data = { entry: inputValue };
     
         try {
-            const response = await fetch("http://127.0.0.1:5000/api/add", {
+            const response = await fetch("https://wwgid-api.onrender.com/api/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
