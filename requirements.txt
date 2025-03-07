@@ -5,3 +5,4 @@ werkzeug==3.0.6
 itsdangerous==2.2.0
 click==8.1.8
 MarkupSafe==2.1.5
+gunicorn==21.2.0
